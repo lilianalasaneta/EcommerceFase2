@@ -1,0 +1,121 @@
+#main-carrito{
+    width: 100%;
+    height: auto;
+    min-height: 630px;
+}
+
+#contenedor-titulo-carrito{
+    width: 100%;
+    height: auto;
+    padding: 1rem 0;
+    background-color: #6a2f20;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    letter-spacing: .1em;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px #cbbeae;
+}
+
+.contenedor-carrito{
+    padding-bottom: 10px;
+}
+
+.carrito__borrar__pedir{
+    width: 140px;
+    height: 60px;
+    border-radius: 5px;
+    font-size: 18px;
+    display: block;
+    cursor: pointer;
+}
+
+.carrito_borrar, .carrito_pedir{
+    background-color: #78554f;
+    color: white;
+    margin: 10px auto;
+}
+
+h2 {
+    text-align: center;
+}
+
+.contenedor-carrito table{
+    width: 80%;
+    height: auto;
+    margin: 5px auto;
+    color: rgb(63, 60, 60);
+    border-collapse: collapse;
+}
+
+.contenedor-carrito table thead th, .contenedor-carrito table tbody tr td{
+    width: 150px;
+    height: 30px;
+    padding: 20px;
+    border: 1px solid #78554f;
+}
+
+.contenedor-carrito table thead th{
+    background-color: #78554f;
+    color: white;
+    text-transform: uppercase;
+}
+
+.contenedor-carrito table tbody tr:nth-child(even){
+    background-color: #e0d5d1;
+}
+
+.contenedor-carrito table tbody tr:nth-child(odd){
+    background-color: #cab6ae;
+}
+
+.centrar {
+    text-align: center;
+}
+
+table button.btnBorrar {
+    width: 90%;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #78554f;
+    color: white;
+}
+
+.btnIncDec {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: #78554f;
+    color: white;
+    margin-top: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+@media (max-width: 1180px){
+    .contenedor-carrito{
+        overflow-x: auto; 
+        margin: 0 10px 10px 10px;
+    }
+
+    .contenedor-carrito table{
+        white-space: nowrap; 
+    }
+}
+
+@media (max-width: 768px){
+    h2{
+        font-size: 65px;
+    }
+}
+
+@media (max-width: 512px){
+    h2{
+        font-size: 50px;
+    }
+}
+
+    

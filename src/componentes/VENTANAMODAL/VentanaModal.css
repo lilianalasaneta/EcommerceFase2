@@ -1,0 +1,35 @@
+#primero{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#segundo{
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#pregunta{
+    font-size:x-large;
+    text-align: center;
+}
+
+.botones-modal{
+    text-align: center;
+}
+
+#boton-modal-confirma, #boton-modal-no-confirma{
+    width: 150px;
+    height: 30px;
+    margin: 5px;
+    background-color: #78554f;
+    font-size: large;
+    color: white;
+}

@@ -1,0 +1,106 @@
+
+#contenedor-titulo-abm{
+    width: 100%;
+    height: auto;
+    padding: 1rem 0;
+    background-color: #6a2f20;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    color: white;
+    letter-spacing: .1em;
+    text-align: center;
+    text-shadow: 2px 2px 4px #cbbeae;
+}
+
+div h2{
+    padding: 15px;
+    font-size: 30px;
+    color: rgb(63, 60, 60);
+    text-align: center;
+}
+
+#contenedor-gral{
+    padding-bottom: 15px;
+    display: block;
+}
+
+.contenedor-alta{
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#contenedor-form-alta{ 
+    width: 80%; 
+    height: auto;
+    padding: 20px auto;
+    padding-top: 25px;
+    margin: 20px auto; 
+    background-color: white; 
+    color: #78554f;
+    text-align: center;
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}   
+
+.form-group{
+    width: 70%;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+    text-align: center;
+}
+
+.form-group label{
+    margin-bottom: 8px;
+    display: block;
+    font-weight: bold;
+    color: #78554f;
+}
+
+.form-group input[type="text"], .form-group input[type="number"], .form-group textarea{
+    width: 80%;
+    padding: 10px;
+    background-color: #78554f;
+    color: white;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+.form-group input[type="number"]{
+    width: 40%;
+}
+
+.form-group textarea{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    resize: vertical; 
+}
+
+.form-group input[type="checkbox"], .form-group textarea{
+    background-color: #78554f;
+    color: white;
+}
+
+#botones{
+    text-align: center;
+}
+
+#botones #btn-guardar, #botones #btn-cancelar{
+    width: 150px;
+    height: 50px;
+    margin:15px;
+    background-color: #78554f;
+    color: white;
+    font-size: large;
+}
+
+@media (max-width: 768px){
+    .form-group #btn-submit{
+        width: 150px;
+    }
+}
+

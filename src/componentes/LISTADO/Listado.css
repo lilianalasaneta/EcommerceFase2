@@ -1,0 +1,169 @@
+#contenedor-titulo-listado{
+    width: 100%;
+    height: auto;
+    padding: 1rem 0;
+    background-color: #6a2f20;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    color: white;
+    letter-spacing: .1em;
+    text-align: center;
+    text-shadow: 2px 2px 4px #cbbeae;
+}
+
+#contenedor-gral-listado{
+   padding-bottom: 10px;
+   width: 100%;
+   height: auto;
+   min-height: 630px;
+}
+
+#contenedor-listado{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#contenedor-listado div h2{
+    padding: 15px;
+    font-size: 30px;
+    color: rgb(63, 60, 60);
+    text-align: center;
+}
+
+#contenedor-boton-listado{
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    margin-bottom: 10px;
+}
+
+#contenedor-boton-listado #btn-agregar{
+    width: 250px;
+    padding: 12px 20px;
+    background-color: #78554f;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+   
+}
+
+#contenedor-boton-listado #btn-agregar{
+    padding: 15px 40px;
+    margin: 0 20px;
+    position: relative;
+    letter-spacing: 2px;
+    text-align: center;
+    border: 1px solid #968d88;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+#contenedor-boton-listado #btn-agregar:before{
+    width: 50px;
+    height: 150px;
+    position: absolute;
+    right: -40px;
+    top: -40px;
+    content: "";
+    background: #c7c2c0;
+    transform: rotate(37deg);
+    transition: all .3s;
+    opacity: 0.3;
+}
+
+#contenedor-boton-listado #btn-agregar:hover:before{
+    right: 105%;
+}
+
+#mensaje-visible{
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color:#784f55 ;
+    color: white;
+    font-size:x-large;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+#contenedor-tabla-productos table{
+    width: 80%;
+    height: auto;
+    color: rgb(63, 60, 60);
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    
+}
+
+#contenedor-tabla-productos table thead tr th, #contenedor-gral-listado table tbody td{
+    width: 80px;
+    height: 30px;
+    padding: 10px;
+    border: 1px solid #78554f;
+}
+
+#contenedor-tabla-productos table thead tr th{
+    background-color: #78554f;
+    color: white;
+    text-transform: uppercase;
+}
+
+#contenedor-tabla-productos table tbody tr:nth-child(even){
+    background-color: #e0d5d1;
+}
+
+#contenedor-tabla-productos table tbody tr:nth-child(odd){
+    background-color: #cab6ae;
+}
+
+#acciones{
+    text-align: center;
+}
+
+#btn-editar, #btn-borrar{
+    width: 60px;
+    height: 30px;
+    margin: 2px;
+    background-color: #78554f;
+    color: white;
+}
+
+@media (max-width: 1180px){
+    #contenedor-tabla-productos{
+        overflow-x: auto; 
+        margin: 0 10px 0 10px;
+    }
+    #contenedor-tabla-productos table{
+        white-space: nowrap; 
+    }
+}
+
+@media (max-width: 768px){
+    #contenedor-tabla-productos table{
+        padding: 10px;
+    }
+
+    #contenedor-boton-listado{
+         margin-bottom: 20px;
+    }
+
+    #contenedor-boton-listado #btn-agregar{
+        width: 150px;
+    }
+
+}
+
+@media (max-width: 512px){
+    #contenedor-listado div h2{
+        font-size: 23px;
+    }
+}
+

@@ -1,0 +1,102 @@
+#contenedor-titulo-inicio{
+    width: 100%;
+    height: auto;
+    padding: 1rem 0;
+    background-color: #6a2f20;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    color: white;
+    letter-spacing: .1em;
+    text-align: center;
+    text-shadow: 2px 2px 4px #cbbeae;
+}
+
+#contenedor-card{
+    height: auto;
+    min-height: 557px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 500px;
+    display: grid;
+    grid-template-areas: "foto datos";
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: #82615a;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#contenedor-campo-foto{
+    grid-area: foto;
+}
+
+#contenedor-demas-campos{
+    grid-area: datos;
+}
+
+.card #contenedor-campo-foto img{
+    width: 200px;
+}
+
+#campo-nombre {
+    font-size: 35px;
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: -1px 0  #5f5f5f, 0 1px  #5f5f5f, 1px 0  #5f5f5f, 0 -1px  #5f5f5f; 
+}
+
+#campo-precio{
+    font-size: 28px;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#comprar{
+    width: 200px;
+    height: 55px;
+    margin: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #78554f, #cbbeae, #c3b5a8, #cbbeae);
+    box-shadow: 0 4px 15px 0 rgba(120, 85, 79, 0.75);
+}
+
+#comprar:hover{
+    background-position: 100% 0;
+    transition: all .4s ease-in-out;
+}
+
+@media (max-width: 992px){
+    .card{
+        flex-basis: calc(50% - 20px); 
+    }
+}
+
+@media (max-width: 512px){   
+    .card{
+        grid-template-areas: "foto"
+                             "datos";
+    }
+}

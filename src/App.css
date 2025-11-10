@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap');
+
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: auto;
+}
+
+body, ul, h1, h3, p{
+    margin: 0;
+}
+
+header{ 
+    width: 100%;
+    height: auto;
+    font-family: "Oleo Script", system-ui;
+    background-image: linear-gradient(to right, #dfd7cf, #a38b78,  #dfd7cf); 
+}
+
+header .contenedor-header{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+    font-size: 24px;
+}
+
+#logo{
+    flex: 1; 
+}
+
+#logo img{
+    width: 100px;
+    border: 3px solid #968d88;
+    border-radius: 50%;
+}
+
+.barra-busqueda{
+    margin: 0 10px;
+    display: flex;
+    justify-content: space-around;
+    flex: 2; 
+}
+
+.barra-busqueda input[type="text"]{
+    padding: 5px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1;
+}
+
+.barra-busqueda input[type="button"]{
+    padding: 5px 10px;
+    background-color: #78554f;
+    font-family: "Oleo Script", system-ui;
+    font-size: 18px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.barra-busqueda input[type="button"]:hover{
+    background-color: white;
+    color: #78554f;
+}
+
+.contenedor-header :last-child{
+    display: flex;
+    align-items: center;
+}
+
+.contenedor-header :last-child img{
+    width: 45px;
+}
+
+header nav{
+    font-size: 28px;
+}
+
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    list-style: none;
+}
+
+header nav ul li a{
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 2px #232b29;
+}
+
+header nav ul li a:hover{
+    color: #232b29;
+    text-shadow: 2px 2px white;
+}
+
+main{
+    width: 100%;
+    height: auto;
+    min-height: 550px;
+    background-color: #cbbeae;
+}
+
+footer{
+    width: 100%;
+    max-height: auto;
+    display: inline-block;
+    font-family: "Oleo Script", system-ui;
+    font-size: 18px;
+    color: #412f2c;
+    text-align: center;
+    background-image: linear-gradient(to right, #a38b78, #dfd7cf, #a38b78); 
+}
+
+footer :nth-child(1){
+    margin-top: 15px;
+}
+
+footer :nth-child(2){
+    font-style: italic;
+    font-weight: bold;
+    font-size: 28px;
+    text-shadow: 2px 2px #cbbeae;
+}
+
+#facebook{ 
+    width: 42px;
+}
+
+#instagram{ 
+    width: 44.4px;
+}
+
+#youtobe{
+    width: 42.6px;  
+}
+
+#facebook, #instagram, #youtobe{
+    border: 1px solid #968d88;
+}
+
+footer a img{ 
+    border-radius: 50%;
+}
+
+@media (max-width: 768px){
+    .barra-busqueda{
+        margin: 10px 0px;
+        flex: 1 1 100%;
+    }
+
+    header .contenedor-header{
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+    }
+
+    header nav ul{
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+}

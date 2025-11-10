@@ -1,0 +1,134 @@
+#contenedor-titulo-contacto{
+    width: 100%;
+    height: auto;
+    padding: 1rem 0;
+    background-color: #6a2f20;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    color: white;
+    letter-spacing: .1em;
+    text-align: center;
+    text-shadow: 2px 2px 4px #cbbeae;
+}
+
+#mensaje-visible{
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #18421a;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000 ;
+}
+
+#contenedor-contacto{
+    width: 100%;
+    height: 570px;
+}
+
+#contenedor-form-contacto{
+    width: 80%; 
+    height: 550px;
+    padding: 20px;
+    margin: 0px auto; 
+    margin-top: 20px;
+    background-color: white; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    color: #232b29;
+    text-align: center;
+}
+
+.campo-formulario{
+    width: 100%;
+    height: 65px;
+    padding: 10px 0;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: inline-block;
+    text-align: center;
+}
+
+#contenedor-mensaje-contacto{
+    width: 100%;
+    height: 140px;
+}
+
+.campo-formulario label{
+    display: block;
+    font-size: 20px;
+}
+
+.campo-formulario input{
+    width: 300px;
+    height: 30px;
+}
+
+#mensaje{
+    width: auto;
+    height: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+}
+
+.campo-formulario input[type="text"], .campo-formulario input[type="email"], #mensaje{
+    width: 50%;
+    background-color: #78554f;
+    color: white;
+    font-size: 17px;
+}
+
+.campo-formulario input[type="submit"]{
+    width: 200px;
+    height: 55px;
+}
+
+#boton-contacto{
+    height: 60px;
+    padding: 0 2em;
+    border: none;
+    position: relative;
+    background-color: #78554f;
+    color: white;
+    font-size: 1.6em;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+}
+
+#boton-contacto:hover{
+    background-color: white;
+    color: #78554f;
+}
+
+#boton-contacto:before,#boton-contacto:after{
+    height: 2px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #78554f;
+    content: '';
+    transition: 400ms ease all;
+}
+
+#boton-contacto:after{
+    top: inherit;
+    right: inherit;
+    bottom: 0;
+    left: 0;
+}
+
+#boton-contacto:hover:before,#boton-contacto:hover:after{
+    width: 100%;
+    transition: 800ms ease all;
+}
+
+@media (max-width: 512px){
+    #boton-contacto{
+        width: 150px;
+        font-size: 20px;
+    }
+}
+
