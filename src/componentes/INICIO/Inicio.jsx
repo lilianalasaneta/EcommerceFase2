@@ -96,6 +96,7 @@ const Inicio = () => {
     setNombreParaEliminar(null)
   }
 
+  
   return (
     <>
 
@@ -130,7 +131,7 @@ const Inicio = () => {
                   </div>
               )
 
-          : ''
+            : ''
           }
 
         </div>

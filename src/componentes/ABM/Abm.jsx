@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 import './Abm.css'
+import { ObtenerFoto } from './ObtenerFoto'
+
 
 function Abm({ agregarRegistro, editarRegistro, registroSeleccionado, cancelarRegistro, quienLlamo}) {
 
@@ -8,7 +10,7 @@ function Abm({ agregarRegistro, editarRegistro, registroSeleccionado, cancelarRe
       nombre: '', 
       marca: '', 
       categoria: '', 
-      stock: '0', 
+      stock: '', 
       descripcion_corta: '', 
       descripcion_larga: '', 
       precio: '', 
@@ -81,12 +83,12 @@ function Abm({ agregarRegistro, editarRegistro, registroSeleccionado, cancelarRe
   const handleChange = (e) => {
     e.preventDefault()
     if(e.target.name === 'envio'){
-        setProducto({...producto, envio: e.target.checked,})
+        setProducto({...producto, envio: e.target.checked})
     }else{
         const { name, value } = e.target
         setProducto({...producto, [name]: value,})
         const error = validarCampos(name, value)
-        setErrores({...errores, [name]: error,})
+        setErrores({...errores, [name]: error})
     }
   }
 
@@ -124,6 +126,13 @@ function Abm({ agregarRegistro, editarRegistro, registroSeleccionado, cancelarRe
     cancelarRegistro()
   }
 
+
+
+  const escribirCampoFoto = urlFoto => {
+    const productoClon = { ...producto }
+    productoClon.foto = urlFoto
+    setProducto(productoClon)
+  }
 
 
   return (
@@ -174,6 +183,7 @@ function Abm({ agregarRegistro, editarRegistro, registroSeleccionado, cancelarRe
               <label htmlFor="foto">Foto</label>
               <input type="text" id="foto" name="foto" value={producto.foto} onChange={handleChange}/>
               {errores.foto && <p style={{ color: 'red' }}>{errores.foto}</p>}
+              <ObtenerFoto escribirCampoFoto={escribirCampoFoto} />
           </div>
           <div className="form-group">
               <label htmlFor="envio">Envío sin cargo</label>

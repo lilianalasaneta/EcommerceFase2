@@ -1,9 +1,10 @@
 import axios from "axios"
+import { production } from "./productos"
 
-//const url = 'https://6900fbf5ff8d792314bc3720.mockapi.io/api/pedidos/'
+//const url = 'http://localhost:8080/api/pedidos/'        // para ambiente de desarrollo
+//const url = '/api/pedidos/'                             // para ambiente de producción
 
-
-const url = 'https://6900fbf5ff8d792314bc3720.mockapi.io/api/pedidos/'
+const url =  production? '/api/pedidos/' : 'http://localhost:8080/api/pedidos/'
 
 const enviar = pedido => axios.post(url, pedido, {
     headers: { 'content-type':'application/json'}
@@ -11,6 +12,6 @@ const enviar = pedido => axios.post(url, pedido, {
 
 
 export default {
-    enviar,        // POST
+    enviar       // POST
 }
 

@@ -15,6 +15,7 @@ const Carrito = () => {
   const [mensajeVisible, setMensajeVisible] = useState(false)
   const [mensajeCartel, setMensajeCartel] = useState('')
   const [carrito, setCarrito] = useStateLocalStorage('carrito', [] )
+  const [queConfirma, setQueConfirma] = useState('')
 
 
   const mostrarMensaje = () => {
@@ -27,13 +28,13 @@ const Carrito = () => {
   
 
 
-
   function borrarCarrito() {
     setModalVisible(true)
     setIdParaEliminar(-1)
     setNombreParaEliminar('')
     setPreguntaAVisualizar('¿Está seguro que quiere eliminar todos los productos del carrito')
     setTituloAVisualizar('Confirmar eliminación del carrito')
+    setQueConfirma('Borrar carrito')
   }
 
 
@@ -44,6 +45,7 @@ const Carrito = () => {
     setNombreParaEliminar('')
     setPreguntaAVisualizar('¿Está seguro de generar el pedido')
     setTituloAVisualizar('Confirmar generar el pedido')
+    setQueConfirma('Generar Pedido')
   }
 
 
@@ -78,6 +80,7 @@ const Carrito = () => {
     setNombreParaEliminar(nombre)
     setPreguntaAVisualizar('¿Está seguro de borrar del carrito el producto ')
     setTituloAVisualizar('Confirmar eliminación')
+    setQueConfirma('Borrar item')
   }  
 
 
@@ -93,13 +96,13 @@ const Carrito = () => {
 
 
   const handleConfirm = async () => {
-    if(idParaEliminar > 0){
+    if(queConfirma === 'Borrar item'){
       const carritoClon = [...carrito]
       const index = carritoClon.findIndex(p => p.id == idParaEliminar)
       carritoClon.splice(index, 1)
       setCarrito(carritoClon)
       setMensajeCartel('Producto eliminado del carrito exitosamente!!!')
-    }else if(idParaEliminar == -1){
+    }else if(queConfirma === 'Borrar carrito'){
       setCarrito([])
       setMensajeCartel('Carrito eliminado exitosamente!!!')
     }else{
@@ -114,6 +117,7 @@ const Carrito = () => {
     setNombreParaEliminar(null)
     setPreguntaAVisualizar(null)
     setTituloAVisualizar(null)
+    setQueConfirma('')
   }
 
 
@@ -121,6 +125,7 @@ const Carrito = () => {
   const handleUnBotonConfirm = () => {
       setModalVisible(false)
 }
+
 
 return (
   <>

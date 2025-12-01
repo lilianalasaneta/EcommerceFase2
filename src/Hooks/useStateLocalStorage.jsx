@@ -1,10 +1,12 @@
 import { useState } from "react"
+import { proxyProducto } from "../servicios/productos"
 
  export function useStateLocalStorage(key, inicial) {
     const [storedValue, setStoredValue] = useState(() => {
         try {
             const item = localStorage.getItem(key)
-            return item? JSON.parse(item) : inicial
+            //return item? JSON.parse(item) : inicial
+            return item? JSON.parse(item).map(producto => proxyProducto(producto)) : inicial
         }
         catch(error) {
             console.error('ERROR useStateLocalStorage (inicial)', error)
@@ -24,4 +26,3 @@ import { useState } from "react"
 
     return [storedValue, setValue]
 }
-
